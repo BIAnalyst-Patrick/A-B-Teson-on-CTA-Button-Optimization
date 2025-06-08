@@ -10,8 +10,12 @@
 - **Statistical Confidence:** 99.9%+ (p-value ≈ 0)
 - **Business Impact:** High - exceeds minimum viable improvement threshold by 4x
 
+![image-1](https://github.com/user-attachments/assets/6b15ece2-86cb-46f7-8048-9f136972378a)
+
 ### Recommendation
 Immediately implement the new CTA button design across all user touchpoints. The experimental variant demonstrates exceptional performance with both statistical significance and substantial business impact.
+
+![image](https://github.com/user-attachments/assets/1c6e42d8-b20d-46fc-beb0-5bc7ab265c56)
 
 ---
 
@@ -83,8 +87,10 @@ The test statistic of -59.44 falls well outside the critical region (±1.96), pr
 
 The observed improvement significantly exceeds our business threshold, indicating meaningful real-world impact.
 
-**[FIGURE 2: Statistical Significance Visualization - Normal Distribution]**
-*Insert: Standard normal distribution curve showing rejection regions, Z-critical values (±1.96), and test statistic (-59.44) with shaded rejection areas*
+**[FIGURE: Statistical Significance Visualization - Normal Distribution]**
+
+![image-1](https://github.com/user-attachments/assets/9d014695-97a2-44b0-a456-ea16af21df63)
+
 
 #### 3.2.3 Confidence Interval
 We are 95% confident that the new CTA button improves click-through rates by between **39.9% and 42.6%** compared to the current design.
@@ -215,6 +221,8 @@ Where:
 - p̂ = pooled proportion
 - n₁, n₂ = sample sizes
 
+---
+
 ### 8.2 Technical Implementation Details
 **Analysis Environment:**
 - **Language:** Python 3.x
@@ -235,15 +243,31 @@ Where:
 - Reproducible analysis with version-controlled code
 - Peer review of statistical methodology
 
+---
+
 ## 9. Appendices
 
 ### Appendix A: Visual Analysis
 
-**[FIGURE 3: Power Analysis Parameters Screenshot]**
-*Insert: Screenshot showing alpha = 0.05 and delta = 0.1 parameter settings*
+**Power Analysis Parameters**
+alpha = 0.05 and delta = 0.1 parameter settings
 
-**[FIGURE 4: Data Summary Statistics]**
-*Insert: DataFrame output showing descriptive statistics and group-wise click summaries*
+**Data Summary Statistics**
+        user_id         click
+ count  20000.000000  20000.000000
+ mean   10000.500000      0.405250
+ std     5773.647028      0.490953
+ min        1.000000      0.000000
+ 25%     5000.750000      0.000000
+ 50%    10000.500000      0.000000
+ 75%    15000.250000      1.000000
+ max    20000.000000      1.000000
+         user_id  click
+ group                  
+con    150005000   1989
+ exp     50005000   6116
+
+---
 
 ### Appendix B: Statistical Code Implementation
 
@@ -271,6 +295,7 @@ CI = [
     round((p_exp_hat - p_con_hat) + SE*Z_crit, 3)
 ]
 ```
+---
 
 ### Appendix C: Data Quality Checks
 
@@ -296,4 +321,3 @@ This A/B test demonstrates a clear winner with unprecedented effect size. The ne
 
 *Report prepared by: Patrick Gichuki*  
 *Contact: patrickgichuki2@gmail.com*  
-*Date: March 24, 2024*
